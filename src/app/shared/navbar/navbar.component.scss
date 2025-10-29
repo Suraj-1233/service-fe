@@ -1,0 +1,8 @@
+.topbar {
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(214, 31, 31, 0.06);
+  display:flex; gap:12px; align-items:center;
+}
+.title { margin-left: 8px; font-weight: 600; }
+.spacer { flex: 1 1 auto; }
+.search { width: 320px; margin-right: 8px; }

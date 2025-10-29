@@ -1,0 +1,23 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <h2 class="text-center">Admin Login</h2>
+
+    <form (ngSubmit)="onLogin()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput [(ngModel)]="email" name="email" required type="email" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="password" name="password" required type="password" />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" class="full-width" type="submit">
+        Login
+      </button>
+
+      <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+    </form>
+  </mat-card>
+</div>

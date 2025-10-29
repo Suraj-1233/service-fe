@@ -1,0 +1,24 @@
+.orders-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  th {
+    font-weight: 600;
+    color: #444;
+  }
+
+  tr:hover {
+    background-color: #fafafa;
+  }
+}
+
+mat-dialog-content {
+  max-height: 400px;
+  overflow: auto;
+}

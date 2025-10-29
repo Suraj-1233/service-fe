@@ -1,0 +1,23 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+a.mat-list-item {
+  color: #bbb;
+  border-radius: 6px;
+}
+
+a.active {
+  background-color: #4f46e5;
+  color: white;
+}

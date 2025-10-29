@@ -1,0 +1,41 @@
+<h2 mat-dialog-title>Order Details - {{ data.id }}</h2>
+
+<mat-dialog-content>
+  <p><strong>Customer:</strong> {{ data.customerName }}</p>
+  <p><strong>Address:</strong> {{ data.address }}</p>
+  <p><strong>Pickup Date:</strong> {{ data.pickupDate | date:'mediumDate' }}</p>
+  <p><strong>Delivery Date:</strong> {{ data.deliveryDate ? (data.deliveryDate | date:'mediumDate') : 'Not assigned' }}</p>
+  <p><strong>Created At:</strong> {{ data.createdAt | date:'medium' }}</p>
+
+  <div style="margin-top: 12px;">
+    <p><strong>Status:</strong></p>
+    <mat-form-field appearance="fill" style="width: 220px;">
+      <mat-select [formControl]="statusControl">
+        <mat-option value="PENDING">Pending</mat-option>
+        <mat-option value="PICKED_UP">Picked Up</mat-option>
+        <mat-option value="WASHING">Washing</mat-option>
+        <mat-option value="IRONING">Ironing</mat-option>
+        <mat-option value="READY_FOR_DELIVERY">Ready for Delivery</mat-option>
+        <mat-option value="DELIVERED">Delivered</mat-option>
+        <mat-option value="COMPLETED">COMPLETED</mat-option>
+
+        <mat-option value="CANCELLED">Cancelled</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+  <h4 style="margin-top: 20px;">Items</h4>
+  <table style="width: 100%;">
+    <tr *ngFor="let it of data.items">
+      <td>{{ it.name }}</td>
+      <td style="text-align: right;">₹{{ it.price }}</td>
+    </tr>
+  </table>
+
+  <p style="margin-top: 12px;"><strong>Total:</strong> ₹{{ data.totalAmount }}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button (click)="close()">Close</button>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+</mat-dialog-actions>

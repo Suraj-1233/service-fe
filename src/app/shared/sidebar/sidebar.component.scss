@@ -1,0 +1,5 @@
+:host { display:block; height:100%; position:relative; }
+.brand { font-size: 20px; font-weight: 700; padding: 20px; color: #fff; }
+mat-nav-list a.mat-list-item { color: rgba(255,255,255,0.95); margin: 4px 8px; border-radius: 6px; gap: 12px; }
+mat-nav-list a.active { background: rgba(237, 37, 37, 0.08); }
+.sidebar-footer { position: absolute; bottom: 12px; left: 16px; color: rgba(232, 33, 33, 0.6); }

@@ -1,0 +1,5 @@
+.dashboard-grid { display: grid; grid-template-columns: 1fr; gap: 18px; }
+.stat-card { display:flex; align-items:center; padding: 12px; }
+.stat-left mat-icon{ font-size:36px; margin-right:12px; color:#4f46e5 }
+.stat-right .num{ font-size:20px; font-weight:700 }
+.recent { padding: 12px; }

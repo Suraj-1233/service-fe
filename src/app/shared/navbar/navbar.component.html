@@ -1,0 +1,13 @@
+<mat-toolbar class="topbar">
+  <button mat-icon-button (click)="toggleSidebar.emit()"><mat-icon>menu</mat-icon></button>
+  <div class="title">Laundry Admin Panel</div>
+  <span class="spacer"></span>
+
+  <mat-form-field class="search" appearance="outline">
+    <mat-label>Search orders, customers...</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <button mat-icon-button matTooltip="Notifications"><mat-icon>notifications</mat-icon></button>
+  <button mat-icon-button matTooltip="Account"><mat-icon>account_circle</mat-icon></button>
+</mat-toolbar>
